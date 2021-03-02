@@ -20,7 +20,7 @@
         $statement->execute();
         $course = $statement->fetch();
         $statement->closeCursor();
-        $course_name = $course["courseName"];
+        $course_name = $course['courseName'];
         return $course_name;
     }
 

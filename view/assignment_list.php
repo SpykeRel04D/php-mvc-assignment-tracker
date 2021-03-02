@@ -8,11 +8,11 @@
                 <option value="0">View All</option>
                 <?php foreach($courses as $course) : ?>
                 <?php if ($course_id == $course["courseID"]) { ?>
-                    <option value="<?= $course["courseID"] ?>" selected>
+                    <option value="<?= $course['courseID'] ?>" selected>
                 <?php } else { ?> 
-                    <option value="<?= $course["courseID"] ?>">
+                    <option value="<?= $course['courseID'] ?>">
                 <?php } ?> 
-                        <?= $course["courseName"] ?>
+                        <?= $course['courseName'] ?>
                     </option>
                     <?php endforeach; ?>
             </select>
@@ -23,8 +23,8 @@
         <?php foreach($assignments as $assignment) : ?>
         <div class="list__row">
             <div class="list__item">
-                <p class="bold"><?= $assignment["courseName"] ?></p>
-                <p><?= $assignment["Description"] ?></p>
+                <p class="bold"><?= $assignment['courseName'] ?></p>
+                <p><?= $assignment['Description'] ?></p>
             </div>
             <div class="list__removeItem">
                 <form action="." method="post">
@@ -55,8 +55,8 @@
             <select name="course_id" required>
                 <option value="">Please select</option>
                 <?php foreach ($courses as $course) : ?>
-                    <option value="<? $course["courseID"]; ?>">
-                        <?= $course["courseName"]; ?>
+                    <option value="<?= $course['courseID']; ?>">
+                        <?= $course['courseName']; ?>
                     </option>
                 <?php endforeach; ?>
             </select>
